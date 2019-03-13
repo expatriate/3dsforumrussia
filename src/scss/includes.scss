@@ -1,0 +1,114 @@
+
+body, html {
+    height: 100%;
+    background: #ffffff;
+    font-family: '3ds', Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    height: 100%;
+    background: rgba(0, 0, 0, 0) url(/img/background.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+}
+
+*{
+  outline: none;
+}
+
+.content {
+    &__wrapper {
+        max-width: 1600px;
+        margin: 0 auto;
+
+        &--centered {
+            display: flex;
+            justify-content: center;
+        }
+
+
+    }
+
+    &-wide {
+        max-width: 960px;
+        width: 100%;
+
+        @media screen and (max-width: 720px) {
+            padding: 0 1.5em;
+        }
+    }
+
+    &-row {
+        margin-bottom: 42px;
+
+        @media screen and (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+
+.header {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 32px 0px 32px;
+
+    .icon {
+        width: 300px;
+        height: 50px;
+        fill: #fff;
+    }
+
+    @media screen and (max-width: 720px) {
+        padding: 0 1.5em;
+        .icon {
+            width: 180px;
+            height: 50px;
+        }
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 0px;
+
+    a {
+        color: #fff;
+        opacity: 0.64;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 200ms ease-out;
+
+        &:hover {
+            opacity: 1
+        }
+    }
+    span {
+        &:not(:last-child) {
+            &:after {
+                content: '›';
+                font-size: 22px;
+                line-height: 10px;
+                position: relative;
+                margin-left: 8px;
+                margin-right: 8px;
+                color: #fff;
+            }
+        }
+
+        &:last-child {
+            a {
+                pointer-events: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        display: none;
+    }
+}
