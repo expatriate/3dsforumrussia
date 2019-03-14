@@ -33,4 +33,12 @@ function ready() {
       'display': 'none'
     }).removeClass('active');
   });
+  var width = $('.tab-content__item').first().find('iframe').width();
+  var padding = 40;
+
+  if (window.innerWidth <= 720) {
+    padding = 0;
+  }
+
+  $('.tab-content__item').find('iframe').attr('width', window.innerWidth - padding);
 }

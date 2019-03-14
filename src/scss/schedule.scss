@@ -1,4 +1,4 @@
-.schedule-page {
+.schedule-page, .stream-page {
 
     height: auto;
     flex: 1;
@@ -68,7 +68,7 @@
             height: 100%;
             min-height: 400px; 
             display: none;
-            padding: 6px 12px;
+            padding: 12px 12px;
             border-top: none;
             box-sizing: border-box;
 
@@ -241,6 +241,16 @@
 
         @media screen and (max-width: 720px) {
             max-width: 100%;
+        }
+    }
+}
+
+.stream-page {
+    .tab-content {
+        &__item {
+            @media screen and (max-width: 720px) {
+                padding: 0px;
+            }
         }
     }
 }
