@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
   // Tabs
   $('.tab-head__item').on('click', function (e) {
+    e.preventDefault();
     $('.tab-content__item').css({
       'display': 'none'
     });
